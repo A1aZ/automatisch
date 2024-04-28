@@ -12,6 +12,8 @@ import replace from './transformers/replace.js';
 import stringToBase64 from './transformers/string-to-base64.js';
 import trimWhitespace from './transformers/trim-whitespace.js';
 import useDefaultValue from './transformers/use-default-value.js';
+import jsonStringify from './transformers/json-stringify.js';
+import jsonParse from "./transformers/json-parse.js";
 
 const transformers = {
   base64ToString,
@@ -26,6 +28,8 @@ const transformers = {
   stringToBase64,
   trimWhitespace,
   useDefaultValue,
+  jsonStringify,
+  jsonParse,
 };
 
 export default defineAction({
@@ -53,6 +57,8 @@ export default defineAction({
         { label: 'String to Base64', value: 'stringToBase64' },
         { label: 'Trim Whitespace', value: 'trimWhitespace' },
         { label: 'Use Default Value', value: 'useDefaultValue' },
+        { label: 'JSON Stringify', value: 'jsonStringify' },
+        { label: 'JSON Parse', value: 'jsonParse' },
       ],
       additionalFields: {
         type: 'query',
