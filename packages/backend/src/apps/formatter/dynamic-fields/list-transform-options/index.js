@@ -15,6 +15,8 @@ import randomNumber from './numbers/random-number.js';
 import formatNumber from './numbers/format-number.js';
 import formatPhoneNumber from './numbers/format-phone-number.js';
 import formatDateTime from './date-time/format-date-time.js';
+import jsonStringify from './text/json-stringify.js';
+import jsonParse from './text/json-parse.js';
 
 const options = {
   base64ToString,
@@ -34,6 +36,8 @@ const options = {
   formatNumber,
   formatPhoneNumber,
   formatDateTime,
+  jsonStringify,
+  jsonParse,
 };
 
 export default {
