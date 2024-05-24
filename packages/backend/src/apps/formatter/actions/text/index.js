@@ -2,6 +2,7 @@ import defineAction from '../../../../helpers/define-action.js';
 
 import base64ToString from './transformers/base64-to-string.js';
 import capitalize from './transformers/capitalize.js';
+import encodeUriComponent from './transformers/encode-uri-component.js';
 import extractEmailAddress from './transformers/extract-email-address.js';
 import extractNumber from './transformers/extract-number.js';
 import htmlToMarkdown from './transformers/html-to-markdown.js';
@@ -10,6 +11,7 @@ import markdownToHtml from './transformers/markdown-to-html.js';
 import pluralize from './transformers/pluralize.js';
 import replace from './transformers/replace.js';
 import stringToBase64 from './transformers/string-to-base64.js';
+import encodeUri from './transformers/encode-uri.js';
 import trimWhitespace from './transformers/trim-whitespace.js';
 import useDefaultValue from './transformers/use-default-value.js';
 import jsonStringify from './transformers/json-stringify.js';
@@ -18,6 +20,7 @@ import jsonParse from "./transformers/json-parse.js";
 const transformers = {
   base64ToString,
   capitalize,
+  encodeUriComponent,
   extractEmailAddress,
   extractNumber,
   htmlToMarkdown,
@@ -26,6 +29,7 @@ const transformers = {
   pluralize,
   replace,
   stringToBase64,
+  encodeUri,
   trimWhitespace,
   useDefaultValue,
   jsonStringify,
@@ -47,6 +51,10 @@ export default defineAction({
       options: [
         { label: 'Base64 to String', value: 'base64ToString' },
         { label: 'Capitalize', value: 'capitalize' },
+        {
+          label: 'Encode URI Component',
+          value: 'encodeUriComponent',
+        },
         { label: 'Convert HTML to Markdown', value: 'htmlToMarkdown' },
         { label: 'Convert Markdown to HTML', value: 'markdownToHtml' },
         { label: 'Extract Email Address', value: 'extractEmailAddress' },
@@ -55,6 +63,7 @@ export default defineAction({
         { label: 'Pluralize', value: 'pluralize' },
         { label: 'Replace', value: 'replace' },
         { label: 'String to Base64', value: 'stringToBase64' },
+        { label: 'Encode URI', value: 'encodeUri' },
         { label: 'Trim Whitespace', value: 'trimWhitespace' },
         { label: 'Use Default Value', value: 'useDefaultValue' },
         { label: 'JSON Stringify', value: 'jsonStringify' },
